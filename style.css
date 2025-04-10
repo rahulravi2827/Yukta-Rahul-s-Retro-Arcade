@@ -1,0 +1,52 @@
+
+body {
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  background: #121212;
+  color: #fff;
+  text-align: center;
+  background-image: radial-gradient(circle, #ff0066, #6600ff, #00ccff);
+  background-size: cover;
+  animation: glow 10s infinite alternate;
+}
+
+@keyframes glow {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+header {
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.7);
+  border-bottom: 5px solid #ffcc00;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  padding: 2rem;
+}
+
+.games-grid a {
+  display: block;
+  padding: 20px;
+  background: #000;
+  color: #ffcc00;
+  border: 2px solid #ffcc00;
+  text-decoration: none;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.games-grid a:hover {
+  transform: scale(1.05);
+  background: #ff0066;
+  color: #fff;
+  border-color: #fff;
+}
+
+footer {
+  padding: 1rem;
+  background: #000;
+  border-top: 5px solid #ffcc00;
+}
